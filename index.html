@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <title>Hacked Page</title>
+  <style>
+    body {
+      background: #000;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #f00;
+      font-family: monospace;
+      text-align: center;
+    }
+    img {
+      max-width: 90vw;
+      max-height: 70vh;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0,0,0,.6);
+    }
+    .text {
+      margin-top: 16px;
+      font-size: 28px;
+      font-weight: bold;
+      text-shadow: 0 0 15px red;
+    }
+    a {
+      margin-top: 10px;
+      font-size: 20px;
+      color: #0f0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <img src="images.jfif" alt="الصورة" />
+  <div class="text">Hacked By #AlOtAiBi</div>
+  <a href="https://guns.lol/aboatb" target="_blank">https://guns.lol/aboatb</a>
+
+  <audio id="music" src="https://files.catbox.moe/ohwtsa.mp3" autoplay loop muted></audio>
+
+  <script>
+    const audio = document.getElementById("music");
+    audio.volume = 1.0;
+    let tryPlay = setInterval(() => {
+      audio.muted = false;
+      audio.play().then(() => {
+        clearInterval(tryPlay); // وقف المحاولات إذا اشتغل الصوت
+      }).catch(() => {});
+    }, 1000);
+  </script>
+</body>
+</html>
